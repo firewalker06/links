@@ -1,11 +1,13 @@
 <div class="m-24">
-  <div class="max-w-md border border-solid rounded border-gray-300 p-2">
+  <div class="max-w-md mx-auto border border-solid rounded border-gray-300 p-4">
     <img class="rounded-full block mx-auto" src="https://en.gravatar.com/userimage/1886358/6fb39fd3ee0085147a63cbdcc3511cf3.jpg?size=200">
 
     <h1 class="text-xl text-center text-gray-600 my-2">Didik Wicaksono</h1>
 
     <% @links.each do |link| %>
-      <%= link_to link[0], link[1], class: "block my-2 p-4 text-center border border-solid rounded border-gray-300 text-gray-500" %>
+      <%= link_to link[1], target: "_blank", class: "block my-4 p-4 text-center border border-solid rounded border-gray-300 text-gray-700 bg-white hover:bg-gray-100" do %>
+        <i class="lab <%= "la-#{link[0].downcase}" %>">&nbsp;</i><%= link[0] %>
+      <% end %>
     <% end %>
   </div>
 </div>
